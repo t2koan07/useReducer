@@ -48,8 +48,6 @@ function todosReducer(state: Todo[], action: Action): Todo[] {
 export function useTodos() {
   const [todos, dispatch] = useReducer(todosReducer, []);
 
-  // Public API
-
   const addTodo = (title: string) => {
     dispatch({ type: "ADD_TODO", payload: { title } });
   };
